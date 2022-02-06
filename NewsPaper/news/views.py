@@ -130,11 +130,3 @@ def subscription(request):
     # она хранится в META, а это словарь, поэтому достаём через гет
     # если этого ключа нет, то возвращается рут и редирект кидает в корень
     return redirect(request.META.get('HTTP_REFERER', '/'))
-
-# D16.4
-# def set_timezone(request):
-#     if request.POST:
-#         request.session['django_timezone'] = request.POST['timezone']
-#         return redirect(request.META.get('HTTP_REFERER'))
-
-
